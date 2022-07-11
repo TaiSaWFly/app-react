@@ -13,17 +13,19 @@ const CountersList = () => {
   const [counters, setCounters] = useState(initialState);
 
   const handleIncrement = (id) => {
-    const counterIncrement = counters.filter((c) =>
-      c.id === id ? (c.value = c.value + 1) : c
+    setCounters(
+      counters.map((count) =>
+        id === count.id ? { ...count, value: count.value + 1 } : count
+      )
     );
-    setCounters(counterIncrement);
   };
 
   const handleDecrment = (id) => {
-    const counterDecrment = counters.filter((c) =>
-      c.id === id ? (c.value = c.value - 1) : c
+    setCounters(
+      counters.map((count) =>
+        id === count.id ? { ...count, value: count.value - 1 } : count
+      )
     );
-    setCounters(counterDecrment);
   };
 
   const handleDelete = (id) => {
