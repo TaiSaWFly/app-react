@@ -20,7 +20,7 @@ const CountersList = () => {
     );
   };
 
-  const handleDecrment = (id) => {
+  const handleDecrement = (id) => {
     setCounters(
       counters.map((count) =>
         id === count.id ? { ...count, value: count.value - 1 } : count
@@ -44,7 +44,7 @@ const CountersList = () => {
           key={count.id}
           onDelete={handleDelete}
           onIncrement={handleIncrement}
-          onDecrment={handleDecrment}
+          onDecrement={handleDecrement}
           {...count}
         />
       ))}

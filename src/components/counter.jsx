@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Counter = (props) => {
   const { value } = props;
@@ -23,7 +23,7 @@ const Counter = (props) => {
       </button>
       <button
         className="btn btn-primary btn-sm m-2"
-        onClick={() => props.onDecrment(props.id)}
+        onClick={() => props.onDecrement(props.id)}
       >
         -
       </button>
